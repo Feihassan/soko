@@ -15,7 +15,12 @@ const RegisterPage = () => {
     e.preventDefault()
     // Handle registration logic here
     console.log('Register:', { ...formData, userType })
-    navigate('/dashboard')
+    // Redirect based on user type
+    if (userType === 'artisan') {
+      navigate('/dashboard')
+    } else {
+      navigate('/buyer-dashboard')
+    }
   }
 
   const handleChange = (e) => {

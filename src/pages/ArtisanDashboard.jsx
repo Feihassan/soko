@@ -79,17 +79,17 @@ const ArtisanDashboard = () => {
         </div>
       </nav>
 
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         {/* Sidebar */}
-        <aside className="w-64 bg-white min-h-[calc(100vh-4rem)] border-r border-gray-200">
-          <div className="p-4">
+        <aside className="w-full md:w-64 bg-white border-b md:border-b-0 md:border-r border-gray-200">
+          <div className="p-4 overflow-x-auto">
             <h2 className="text-sm font-semibold text-gray-500 uppercase mb-4">
               Artisan Dashboard
             </h2>
-            <nav className="space-y-1">
+            <nav className="flex md:flex-col space-x-2 md:space-x-0 md:space-y-1 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0">
               <button
                 onClick={() => setActiveTab('dashboard')}
-                className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg transition-colors ${
+                className={`flex-shrink-0 md:w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg transition-colors whitespace-nowrap ${
                   activeTab === 'dashboard'
                     ? 'bg-gray-100 text-gray-900'
                     : 'text-gray-600 hover:bg-gray-50'
@@ -101,7 +101,7 @@ const ArtisanDashboard = () => {
               
               <button
                 onClick={() => setActiveTab('products')}
-                className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg transition-colors ${
+                className={`flex-shrink-0 md:w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg transition-colors whitespace-nowrap ${
                   activeTab === 'products'
                     ? 'bg-primary/10 text-primary'
                     : 'text-gray-600 hover:bg-gray-50'
@@ -113,7 +113,7 @@ const ArtisanDashboard = () => {
               
               <button
                 onClick={() => setActiveTab('orders')}
-                className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg transition-colors ${
+                className={`flex-shrink-0 md:w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg transition-colors whitespace-nowrap ${
                   activeTab === 'orders'
                     ? 'bg-gray-100 text-gray-900'
                     : 'text-gray-600 hover:bg-gray-50'
@@ -125,7 +125,7 @@ const ArtisanDashboard = () => {
               
               <button
                 onClick={() => setActiveTab('messages')}
-                className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg transition-colors ${
+                className={`flex-shrink-0 md:w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg transition-colors whitespace-nowrap ${
                   activeTab === 'messages'
                     ? 'bg-gray-100 text-gray-900'
                     : 'text-gray-600 hover:bg-gray-50'

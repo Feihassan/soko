@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -64,7 +65,7 @@ const ExplorePage = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {works.map((work) => (
-              <div key={work.id} className="card group cursor-pointer hover:shadow-lg transition-shadow duration-300">
+              <Link key={work.id} to={`/product/${work.id}`} className="card group cursor-pointer hover:shadow-lg transition-shadow duration-300">
                 <div className="aspect-square overflow-hidden">
                   <img 
                     src={work.image} 
@@ -83,12 +84,12 @@ const ExplorePage = () => {
                     <span className="text-xl font-bold text-gray-900">
                       ${work.price.toFixed(2)}
                     </span>
-                    <button className="btn-primary text-sm px-4 py-2">
+                    <span className="btn-primary text-sm px-4 py-2">
                       View Details
-                    </button>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
